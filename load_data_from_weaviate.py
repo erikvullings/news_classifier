@@ -67,8 +67,7 @@ def date_iterator(start_date, end_date):
 
 
 def main() -> None:
-    # server = "weaviate"
-    server = "ws-91028.tsn.tno.nl"
+    server = "weaviate"
     client = weaviate.connect_to_custom(
         http_host=server,
         http_port="8889",
