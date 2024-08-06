@@ -1,7 +1,12 @@
 import csv
 from datetime import datetime, timedelta, timezone
+import os
 import weaviate
 from weaviate.classes.query import Filter
+from dotenv import load_dotenv
+
+# Load environment variables from the .env file
+load_dotenv()
 
 def write_to_csv(file, articles, write_header=False):
     fieldnames = ['feedId', 'title', 'language', 'url', 'pub_date', 'created', 'authors', 'summary', 'text']
@@ -67,7 +72,7 @@ def date_iterator(start_date, end_date):
 
 
 def main() -> None:
-    server = "weaviate"
+    server = os.getenv('SERVER') or "localhost"
     client = weaviate.connect_to_custom(
         http_host=server,
         http_port="8889",

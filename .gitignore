@@ -1,1 +1,16 @@
+.env
+*.log
+*.pyc
+*.db
+*.sqlite3
+*.DS_Store
+*.idea
+*.vscode
+*.vscodeignore
+*.vscodesettings
+*.vscode/
+*.vscode/settings.json
+*.vscode/tasks.json
+*.vscode/extensions.json
 *.csv
+.venv
