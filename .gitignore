@@ -13,4 +13,5 @@
 *.vscode/tasks.json
 *.vscode/extensions.json
 *.csv
+data/*.json
 .venv
